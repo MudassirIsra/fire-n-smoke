@@ -74,7 +74,7 @@ This will list all the deployed models on the tenant
 ```
 python  get_va_cloud_data.py model -model_list
 ```
-![Models List](images/model_list.png)
+![Models List](images_run_new_job/model_list.png)
 ​
 ​
 ​
@@ -100,7 +100,7 @@ This argument will create and save csv of all the models available on the tenant
 python  get_va_cloud_data.py model -model_csv
 ```
 ​
-![Model info csv](images/model_info_csv.png)
+![Model info csv](images_run_new_job/model_info_csv.png)
 ​
 ​
 ​
@@ -111,11 +111,18 @@ python  get_va_cloud_data.py model -model_csv
 ​
 # Clone Fire n Smoke Repository
 ```
-git clone https://muhammadtalha323@bitbucket.org/muhammadtalha323/crowd.git
+git clone https://muhammadtalha323@bitbucket.org/muhammadtalha323/fire-n-smoke.git
 ```
+
+# Changes in Fire-n-Smoke constants.py
+In MODEL_DIR change the Models/Fire, Models/Gun, Models/Smoke and in MODEL change weights either v2_fire_weights.pt,gun_weighs_v2.pt, smoke_weights_v2.pt
+MODEL_DIR = path.join(CURR_DIR, "Models/Fire")
+MODEL=path.join(MODEL_DIR,"v2_fire_weights.pt")
+![Models contants.py](images_run_new_job/fire-n-smoke.png)
+
 ​
 # Envirnment Setup
-save the setup.sh and requirements.txt file in the crowd folder
+save the setup.sh and requirements.txt file in the smoke-n-fire folder
 ```
 bash setup.sh
 ```
@@ -142,7 +149,7 @@ run server.py file. This file takes the images as input and returns the predicti
 python server.py
 ```
 # woker.py
-Set_jobs will automatically run this fill. It takes feed from the camera. pass the input to server.py. takers prediction from server.py. Saves the predicted events image, JSON, and video in a folder "final_videos_images".
+Set_jobs will automatically run this fill. It takes feed from the camera pass the input to server.py. takers prediction from server.py. Saves the predicted events image, JSON, and video in a folder "final_videos_images".
 # post_job.py
 This file will upload the event to the dashboard
 ```
