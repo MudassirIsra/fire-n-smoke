@@ -115,9 +115,10 @@ git clone https://muhammadtalha323@bitbucket.org/muhammadtalha323/fire-n-smoke.g
 ```
 
 # Changes in Fire-n-Smoke constants.py
-In MODEL_DIR change the Models/Fire, Models/Gun, Models/Smoke and in MODEL change weights either v2_fire_weights.pt,gun_weighs_v2.pt, smoke_weights_v2.pt
+In MODEL_DIR change the Models/Fire, Models/Gun, Models/Smoke and in MODEL change weights either v2_fire_weights.pt, gun_weighs_v2.pt, smoke_weights_v2.pt
 MODEL_DIR = path.join(CURR_DIR, "Models/Fire")
 MODEL=path.join(MODEL_DIR,"v2_fire_weights.pt")
+
 ![Models contants.py](images_run_new_job/fire-n-smoke.png)
 
 ​
